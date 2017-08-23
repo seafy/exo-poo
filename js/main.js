@@ -70,58 +70,66 @@ function user (prenom,nom,pays,age,naissance,paiement) {
 
 // // EXERCICE 2
 
-var sangoku = new guerrier ("SANGOKU",83,91,100);
-var hit = new guerrier ("HIT",81,89,100);
-
-
-
-function guerrier (nom,attaque,def,sante) {
-  this.nom = nom;
-  this.attaque = attaque;
-  this.def = def;
-  this.sante = sante;
-  this.atk = function (guerrier){
-  guerrier.sante = guerrier.sante - this.attaque;
-  alert("vie restant" +" "+  guerrier.sante +"/100");}
-
- this.getName = function() {
-  alert(this.nom); };
-
+// var sangoku = new guerrier ("SANGOKU",83,91,100);
+// var hit = new guerrier ("HIT",81,89,100);
+//
+//
+//
+// function guerrier (nom,attaque,def,sante) {
+//   this.nom = nom;
+//   this.attaque = attaque;
+//   this.def = def;
+//   this.sante = sante;
+//   this.atk = function (guerrier){
+//   guerrier.sante = guerrier.sante - this.attaque;
+//   alert("vie restant" +" "+  guerrier.sante +"/100");}
+//   // ____________________________________________
+//   this.getName = function() {
+//   alert(this.nom); };
+//   // ____________________________________________
+//   this.double = function (magicien){
+//   magicien.sante  = magicien.sante - this.attaque;
+//   alert("vie restant" +" "+  magicien.sante +"/200");
+//
+//    magicien.sante = magicien.sante + magicien.soin;
+//    alert(magicien.sante + " de sante restant");
+//
+//   }
+//
+//
+//
 }
 
 // alert("La vie de sangoku est:  " + sangoku.sante +  "HP" + "\n" + "La vie de Hit est: " + hit.sante + "HP");
 // alert("Sangoku attaque Hit " ) + sangoku.atk(hit) ;
 // alert("Hit attaque Sangoku " ) + hit.atk(sangoku) ;
+// alert("sangoku attaque le magicien") + sangoku.double(merlin) ;
+// alert("hit attaque le magicien") + hit.double(merlin) ;
 
 
-var merlin = new magicien ("MERLIN",80,50,100,150,10);
 
-function magicien (nom,attaque,def,sante,mana,soin) {
-  this.nom = nom;
-  this.attaque = attaque;
-  this.def = def;
-  this.sante = sante;
-  this.mana = mana;
-  this.soin = soin;
-  this.atk2 = function (magicien){
-  magicien.sante = magicien.sante - guerrier.attaque;
-  alert("vie restant" +" "+  magicien.sante +"/100");}
-
-
-this.getName = function() {
-     alert(this.nom);
-       };
-
-  this.heal = function (magicien) {
-   magicien.sante = magicien.sante + this.soin;
-   alert(magicien.sante + " de sante restant");
-   if (this.mana > 10 ){
-   magicien.mana = this.mana - 10 ;
-   alert(magicien.mana + " mana restant");}
-   else {alert("Erreur:!!");}
-
-alert("Sangoku attaque Magicien " ) + sangoku.atk2(magicien) ;
-alert("Hit attaque Magicien " ) + hit.atk2(magicien);
+// _____________________________________________________________________________
+// var merlin = new magicien ("MERLIN",80,50,200,150,10);
+//
+// function magicien (nom,attaque,def,sante,mana,soin) {
+//   this.nom = nom;
+//   this.attaque = attaque;
+//   this.def = def;
+//   this.sante = sante;
+//   this.mana = mana;
+//   this.soin = soin;
+//   this.getName = function() {
+//      alert(this.nom);
+//        };
+ // ____________________________________________
+  // this.heal = function (magicien) {
+  //  magicien.sante = magicien.sante + this.soin;
+  //  alert(magicien.sante + " de sante restant");
+  //  if (this.mana > 10 ){
+  //  magicien.mana = this.mana - 10 ;
+  //  alert(magicien.mana + " mana restant");}
+  //  else {alert("Je n'est plus de Mana! ");}
+ // ____________________________________________
 
 
 }
@@ -129,8 +137,15 @@ alert("Hit attaque Magicien " ) + hit.atk2(magicien);
 
 // _____SCRIPT ____
 
-
 // merlin.heal(merlin);
 // merlin.getName();
 // sangoku.getName();
 // hit.getName();
+// sangoku.double(merlin);
+// hit.double(merlin);
+
+
+// _____________________________________________________________________________
+
+
+// EXERCICE 3

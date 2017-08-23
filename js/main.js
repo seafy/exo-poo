@@ -69,9 +69,9 @@ function user (prenom,nom,pays,age,naissance,paiement) {
 
 
 // // EXERCICE 2
-//
-var sangoku = new guerrier ("sangoku",83,91,100);
-var hit = new guerrier ("hit",81,89,100);
+
+var sangoku = new guerrier ("SANGOKU",83,91,100);
+var hit = new guerrier ("HIT",81,89,100);
 
 
 
@@ -82,17 +82,19 @@ function guerrier (nom,attaque,def,sante) {
   this.sante = sante;
   this.atk = function (guerrier){
   guerrier.sante = guerrier.sante - this.attaque;
-  alert("vie restant" +" "+  guerrier.sante +"/100");
+  alert("vie restant" +" "+  guerrier.sante +"/100");}
+
+ this.getName = function() {
+  alert(this.nom); };
 
 }
 
 // alert("La vie de sangoku est:  " + sangoku.sante +  "HP" + "\n" + "La vie de Hit est: " + hit.sante + "HP");
-//
 // alert("Sangoku attaque Hit " ) + sangoku.atk(hit) ;
 // alert("Hit attaque Sangoku " ) + hit.atk(sangoku) ;
 
 
-var merlin = new magicien ("MORGANA",80,50,100,150,10);
+var merlin = new magicien ("MERLIN",80,50,100,150,10);
 
 function magicien (nom,attaque,def,sante,mana,soin) {
   this.nom = nom;
@@ -101,6 +103,15 @@ function magicien (nom,attaque,def,sante,mana,soin) {
   this.sante = sante;
   this.mana = mana;
   this.soin = soin;
+  this.atk2 = function (magicien){
+  magicien.sante = magicien.sante - guerrier.attaque;
+  alert("vie restant" +" "+  magicien.sante +"/100");}
+
+
+this.getName = function() {
+     alert(this.nom);
+       };
+
   this.heal = function (magicien) {
    magicien.sante = magicien.sante + this.soin;
    alert(magicien.sante + " de sante restant");
@@ -109,14 +120,17 @@ function magicien (nom,attaque,def,sante,mana,soin) {
    alert(magicien.mana + " mana restant");}
    else {alert("Erreur:!!");}
 
- this.getName = function(magicien) {
-     alert(this.nom);
-       };
+alert("Sangoku attaque Magicien " ) + sangoku.atk2(magicien) ;
+alert("Hit attaque Magicien " ) + hit.atk2(magicien);
+
 
 }
 }
 
 // _____SCRIPT ____
 
-merlin.heal(merlin);
-get.Name();}
+
+// merlin.heal(merlin);
+// merlin.getName();
+// sangoku.getName();
+// hit.getName();

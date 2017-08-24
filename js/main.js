@@ -3,71 +3,72 @@
 
 // variables!
 
+
+//
+// var user1 = {
+// prenom: "jo",
+// nom: "boddy",
+// pays: "france",
+// age: 20,
+// naissance: 1996,
+// paiement: ["visa","mastercard","paypal","espece"],
+// getinfo: function(){
+//    var annee = 2017;
+//    var bornYears =  (annee - this.age);
+//    alert("Nom :" + " " + this.nom+ "\n"  + "Age :" + " "+ this.age+ "\n"  +"Année Naissance :" +" "+ bornYears + "\n" + "Pays :" + " " +this.pays+"\n" +"Paiements :" + " " +this.paiement+ "\n");
+//
+//
+//  }
+// };
+// user1.getinfo();
+//
+//
+// //prototype / function
+//
+// function user (prenom,nom,pays,age,naissance,paiement) {
+//   this.prenom = prenom;
+//   this.nom = nom;
+//   this.pays = pays;
+//   this.age = age;
+//   this.naissance = naissance;
+//   this.paiement = paiement;
+// }
+//
+//
+//
+//
+// //script!
+//
+// var userOne = new user('Bob', 'Smith','usa',32,1985,['paypal','espace']);
+//
+// var infoValid = {
+//     pays: ["FRANCE","ITALIE","BELGIQUE","ESPAGNE"],
+//     paiement: ["VISA" , "ESPECE"],
+//     age: 18,
+//     getVerif : function(){
+//
+// var ages = prompt("Quelle est votre Age?");
+//  if (ages < infoValid.age) {
+//      alert("access refuse!");
+//  }
+// else {
+//    alert("access accepter!");}
+//
+// var country = prompt("Quelle est votre pays?");   //SA MARCHE PAS!!
+//   for(i=0;i<infoValid.pays.length;i++){
+//   if (country == infoValid.pays){
+//       alert("ok!");
+//       break;
+//   }
+//   else {
+//       alert("refusé!");
+//   }
+// }
+// }
+// }
+// infoValid.getVerif();
+//
 /*
-
-var user1 = {
-prenom: "jo",
-nom: "boddy",
-pays: "france",
-age: 20,
-naissance: 1996,
-paiement: ["visa","mastercard","paypal","espece"],
-getinfo: function(){
-    alert("Nom :" + " " + this.nom+ "\n"  + "Age :" + " "+ this.age+ "\n"  +"Année Naissance :" +" "+ this.naissance + "\n" + "Pays :" + " " +this.pays+"\n" +"Paiements :" + " " +this.paiement+ "\n");
-    var annee = 2017;
-    var bornYears =  (annee - this.age);
-    alert(bornYears);
- }
-};
-user1.getinfo();
-
-
-//prototype / function
-
-function user (prenom,nom,pays,age,naissance,paiement) {
-  this.prenom = prenom;
-  this.nom = nom;
-  this.pays = pays;
-  this.age = age;
-  this.naissance = naissance;
-  this.paiement = paiement;
-}
-
-
-
-
-//script!
-
-var userOne = new user('Bob', 'Smith','usa',32,1985,['paypal','espace']);
-
-var infoValid = {
-    pays: ["FRANCE","ITALIE","BELGIQUE","ESPAGNE"],
-    paiement: ["VISA" , "ESPECE"],
-    age: 18,
-    getVerif : function(){
-
-var ages = prompt("Quelle est votre Age?");
- if (ages < infoValid.age) {
-     alert("access refuse!");
- }
-else {
-   alert("access accepter!");}
-
-var country = prompt("Quelle est votre pays?");   SA MARCHE PAS!!
-  for(i=0;i<infoValid.pays.length;i++){
-  if (country == infoValid.pays){
-      alert("ok!");
-      break;
-  }
-  else {
-      alert("refusé!");
-  }
-}
-}
-}
-infoValid.getVerif();
-
-
  // EXERCICE 2
 
 var sangoku = new guerrier ("SANGOKU",83,91,100);
@@ -153,4 +154,9 @@ hit.double(merlin);
 
 // EXERCICE 3
 
+
+ var x = document.getElementsByTagName("p");
+ for (i = 0; i < x.length; i++) {
+     x[i].style.color = "blue";
+     }
 

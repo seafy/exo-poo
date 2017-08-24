@@ -2,3 +2,23 @@ body {
     background-image: url("../img/wp.jpg");
     background-size: cover;
 }
+
+
+.left , .right {
+ width: 300px;
+ height: auto;
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ border: 1;
+ border-style: solid;
+ border-color: orange;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
